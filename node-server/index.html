@@ -106,13 +106,12 @@
     function startEmitting() {
         emiting = true;
         clickReClickBtnInterval = setInterval(() => {
-
             emitEvent('000001', 'Click Re-Click Btn - Clicked');
         }, 500);
     }
 
     function stopEmitting() {
-
+        emiting = false;
         emitEvent('000000', 'Click Re-Click Btn - ReClicked');
         clearInterval(clickReClickBtnInterval);
     }
